@@ -28,7 +28,7 @@ This is the plan for the **1.0 release**, for now the project in in active devel
 - Firewall: :heavy_check_mark:
 - Crontab: :heavy_check_mark:
 - Check services: :heavy_check_mark:
-- Agent: 50%
+- Agent: :heavy_check_mark:
 
 ## Agent
 

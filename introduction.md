@@ -13,6 +13,7 @@ This echosystem is designed for developers to automate site deploy, it control a
 
 # Features
 
+- Compatible Ubuntu 18.04
 - All services you need: PHP 7.4, MySQL, Nginx, Redis, Supervisor. 
 - Anti hammering
 - Automated unattended system security updates

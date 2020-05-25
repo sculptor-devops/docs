@@ -16,6 +16,8 @@ module.exports = {
 				notFoundPath: '/404.html',
 			},
 		],
+		
+		[['vuepress-plugin-code-copy', true]]
 	],
 
 	themeConfig: {
