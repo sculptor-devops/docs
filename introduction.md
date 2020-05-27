@@ -5,9 +5,9 @@ This echosystem is designed for developers to automate site deploy, it control a
 
 ![Scheme](/assets/img/scheme.png)
 
-**Installer** This prepare the machine, configure services and installe the agent.
+**Installer** This prepare the machine, configure services and install the agent.
 
-**Agent** Control and manage all the machine, it expose an api endpoint.
+**Agent** Control and manage all the machine, it expose an rest api endpoint.
 
 **Client** The command line console that allow you to controll remotely your server.
 

@@ -1,6 +1,6 @@
 module.exports = {
 	title: 'Sculptor - Virtual devops',
-	description: 'Just playing around',
+	description: 'Sculptor - Virtual devops',
 
 	extraWatchFiles: [
 		'**/*.md',
@@ -16,7 +16,7 @@ module.exports = {
 				notFoundPath: '/404.html',
 			},
 		],
-		
+
 		[['vuepress-plugin-code-copy', true]]
 	],
 
@@ -29,7 +29,6 @@ module.exports = {
 			{ text: "Home", link: "/" },
 			{ text: "About", link: "/about" },
 			{ text: "GitHub", link: "https://github.com/sculptor-devops" },
-
 		],
 
 		sidebarDepth: 0,
