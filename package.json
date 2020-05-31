@@ -8,7 +8,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev ."
+    "dev": "nodemon --ext md,vue --watch .vuepress --watch . --exec vuepress dev .",
+    "dist": "vuepress build --no-cache"
   },
   "keywords": [],
   "author": "",

@@ -61,3 +61,6 @@ This is the plan for the **1.0 release**, for now the project in in active devel
 - API Backup: TBD
 - API Backup: TBD
 - Migration: TBD
+
+## Other
+- Ubuntu 20.04: :heavy_check_mark:

@@ -1,5 +1,5 @@
 # About
-This project was founded by Alessandro Cappellozza (alessandro.cappellozza@gmail.com), Mauro Gallo (ilphysio@gmail.com), all rights are reserved.
+This project was founded by **Alessandro Cappellozza (alessandro.cappellozza@gmail.com)**, **Mauro Gallo (ilphysio@gmail.com)**, **write@robertogallea.com** all rights are reserved.
 Source code is under MIT license, see below for full description of the contract.
 
 ## MIT License
