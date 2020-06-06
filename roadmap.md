@@ -4,6 +4,15 @@ This is the plan for the **1.0 release**, for now the project in in active devel
 
 [[toc]]
 
+## Versions
+
+| Module            | Version | Stability  |
+|-----------------|---------|--------------|
+| **Installer**   | [![Latest Version on Packagist](https://img.shields.io/packagist/v/sculptor-devops/installer.svg?style=flat-square)](https://packagist.org/packages/sculptor-devops/installer) | Beta Stable |
+| **Foundation**  | [![Latest Version on Packagist](https://img.shields.io/packagist/v/sculptor-devops/foundation.svg?style=flat-square)](https://packagist.org/packages/sculptor-devops/foundation) | Beta Stable |
+| **Agent**       | -     | Development |
+| **Client**      | -     | Development |
+
 ## Installer
 
 - Stage factory: :heavy_check_mark:

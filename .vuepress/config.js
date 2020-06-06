@@ -7,6 +7,11 @@ module.exports = {
 		'.md'
 	],
 
+	head: [
+		['link', {rel: "stylesheet", type: "text/css", href:"/player/asciinema-player.css"}],
+		['script', {src: "/player/asciinema-player.js"}]
+	],
+
 	plugins: [
 		[
 			'vuepress-plugin-clean-urls',
