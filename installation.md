@@ -3,7 +3,7 @@
 Login into your remote machine via SSH and paste this command, if you are in with a sudoer user (not root) run this command in the bash:
 
 ``` bash
-wget -O setup.sh https://github.com/sculptor-devops/installer/releases/latest/download/setup.sh | sudo setup.sh
+wget -O setup.sh https://github.com/sculptor-devops/installer/releases/latest/download/setup.sh | sudo sh setup.sh
 ```
 
 ::: details Install specific version 
@@ -11,7 +11,7 @@ wget -O setup.sh https://github.com/sculptor-devops/installer/releases/latest/do
 If you want to install an older version see [releases](https://github.com/sculptor-devops/installer/releases) and replace **latest/download** in the url with **download/[version]**.
 
 ``` bash
-wget -O setup.sh https://github.com/sculptor-devops/installer/releases/download/v0.1.5/setup.sh | sudo setup.sh
+wget -O setup.sh https://github.com/sculptor-devops/installer/releases/download/v0.1.5/setup.sh | sudo sh setup.sh
 ```
 :::
 
