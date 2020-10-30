@@ -29,7 +29,10 @@ return [
             'Upgrade' => 'docs/upgrade'
         ]
     ],
+    'Contribute' => [
+        'url' => 'docs/contribute'
+    ],
     'About' => [
-        'url' => 'docs/about',
+        'url' => 'docs/about'
     ]
 ];
