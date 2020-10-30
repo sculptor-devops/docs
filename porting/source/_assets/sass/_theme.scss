@@ -1,3 +1,21 @@
 pre {
-	background: linear-gradient(166deg, rgba(80,31,122,1) 0%, rgba(40,32,179,1) 80%);
+  background: linear-gradient(166deg, rgba(80, 31, 122, 1) 0%, rgba(40, 32, 179, 1) 80%);
+}
+
+@layer components {
+  table {
+    @apply min-w-full text-gray-600 bg-gray-200 border-b border-gray-500 rounded p-5 shadow overflow-hidden;
+  }
+
+  th {
+    @apply font-extrabold px-6 py-3 bg-gray-500 text-left text-xs leading-4 text-gray-100 uppercase tracking-wider;
+  }
+
+  tbody {
+    @apply bg-white bg-gray-200;
+  }
+
+  td {
+    @apply px-6 py-4 whitespace-no-wrap;
+  }
 }
