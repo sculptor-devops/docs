@@ -15,7 +15,7 @@ This command will create site home, configurations, files templates and base a c
 you will need to use ***setup*** and ***configure*** before ***deploy*** it. Parameters accepted are ***laravel*** and ***generic***.
 
 ```shell
-$ domain:create example.com laravel
+$ sudo sculptor domain:create example.com laravel
 Running create domain example.com: ✔
 ```
 
@@ -60,14 +60,14 @@ You can list all domains with this command, without parameters all domains will 
 parameters will show up. When you show a specific domain some of the fields are calculated such as deploy url or root domain.
 
 ```shell
-$ domain:show 
+$ sudo sculptor domain:show 
 +--------------+-------+---------+----------+----------+------+
 | Name         | Alias | Type    | Status   | Database | User |
 +--------------+-------+---------+----------+----------+------+
 | example.com  | none  | laravel | deployed | none     | none |
 +--------------+-------+---------+----------+----------+------+
 
-$ domain:show example.com
+$ sudo sculptor domain:show example.com
 +------------------+-----------------------------------------------------------+
 | Name             | Value                                                     |
 +------------------+-----------------------------------------------------------+
@@ -132,7 +132,7 @@ Running domain setup example.com alias=other-example.com: ✔
 ## Configure
 When you ***setup*** a domain or modify a template configuration you need to run configure to apply those modifications. All files will be created or updated in the site root path. 
 ```shell
-$ domain:configure example.com
+$ sudo sculptor domain:configure example.com
 Running domain condifugre example.com: ✔
 ```
 
@@ -175,18 +175,6 @@ completing those parameters with the setup of the domain, so you don't need to k
             
 {COUNT} worker
                          
-## Deploy
-
-domain:deploy {name} {deploy?}
-
-domain:crontab
-
-domain:worker {domain} {status=enable}
-
-domain:disable {name}
-
-domain:enable {name}
-
-
+## Delete
 
 domain:delete {name}
