@@ -6,18 +6,10 @@ return [
         'children' => [
             'Introduction' => 'docs/introduction',
             'Installation' => 'docs/installation',
+            'First Steps' => 'docs/first-steps',
             'Troubleshooting' => 'docs/troubleshooting',
             'Roadmap' => 'docs/roadmap'
         ],
-    ],
-    'Platform' => [
-        'url' => 'docs/domains',
-        'children' => [
-            'Compatibility' => 'docs/compatibility',
-            'Software' => 'docs/software',
-            'Security' => 'docs/security',
-            'Upgrade' => 'docs/upgrade'
-        ]
     ],
     'Commands' => [
         'url' => 'docs/domains',
@@ -26,6 +18,15 @@ return [
             'Deploy' => 'docs/deploy',
             'Backups' => 'docs/backups',
             'System' => 'docs/system',
+        ]
+    ],
+    'Platform' => [
+        'url' => 'docs/domains',
+        'children' => [
+            'Compatibility' => 'docs/compatibility',
+            'Software' => 'docs/software',
+            'Security' => 'docs/security',
+            'Upgrade' => 'docs/upgrade'
         ]
     ],
     'About' => [
