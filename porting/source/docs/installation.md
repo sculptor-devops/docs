@@ -1,0 +1,31 @@
+---
+title: Installation
+description: All domains commands
+extends: _layouts.documentation
+section: content
+---
+
+# Installation
+
+Login into your remote machine via SSH and paste this command, if you are in with a sudoer user (not root) run this command in the bash:
+
+``` bash
+wget -O setup.sh https://github.com/sculptor-devops/installer/releases/latest/download/setup.sh | sudo sh setup.sh
+```
+
+::: details Install specific version 
+
+If you want to install an older version see [releases](https://github.com/sculptor-devops/installer/releases) and replace **latest/download** in the url with **download/[version]**.
+
+``` bash
+wget -O setup.sh https://github.com/sculptor-devops/installer/releases/download/v0.1.5/setup.sh | sudo sh setup.sh
+```
+:::
+
+<asciinema :src="$withBase('/cast/installation_ubuntu18.cast')" cols="80" rows="24" speed="8" />
+
+If you are in with the **root** user you can remove the sudo command before **setup.sh**. This operation will take several minutes to finish, at the end you will recive all credentias. Save those data in a secure place. Seee advance usage to find additiona options for installer customizations.
+
+::: warning
+All operations have to be done on a new clean machine, **DO NOT RUN** on already installed machine.
+:::

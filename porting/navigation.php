@@ -2,18 +2,33 @@
 
 return [
     'Getting Started' => [
-        'url' => 'docs/getting-started',
+        'url' => 'docs/introduction',
         'children' => [
-            'Customizing Your Site' => 'docs/customizing-your-site',
-            'Navigation' => 'docs/navigation',
-            'Algolia DocSearch' => 'docs/algolia-docsearch',
-            'Custom 404 Page' => 'docs/custom-404-page',
+            'Introduction' => 'docs/introduction',
+            'Installation' => 'docs/installation',
+            'Troubleshooting' => 'docs/troubleshooting',
+            'Roadmap' => 'docs/roadmap'
         ],
+    ],
+    'Platform' => [
+        'url' => 'docs/domains',
+        'children' => [
+            'Compatibility' => 'docs/compatibility',
+            'Software' => 'docs/software',
+            'Security' => 'docs/security',
+            'Upgrade' => 'docs/upgrade'
+        ]
     ],
     'Commands' => [
         'url' => 'docs/domains',
         'children' => [
             'Domains' => 'docs/domains',
+            'Deploy' => 'docs/deploy',
+            'Backups' => 'docs/backups',
+            'System' => 'docs/system',
         ]
+    ],
+    'About' => [
+        'url' => 'docs/about',
     ]
 ];
