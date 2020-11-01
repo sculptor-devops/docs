@@ -5,6 +5,9 @@ extends: _layouts.documentation
 section: content
 ---
 
+# Create the server
+First fo all you need to login to your provider and create a machine, generally you need an Ubuntu 18.04 LTS or newer (see compatibility for more informations). 
+
 # Installation
 
 Login into your remote machine via SSH and paste this command, if you are in with a sudoer user (not root) run this command in the bash:
@@ -27,5 +30,5 @@ Save those data in a secure place. See advance usage to find additional options 
 <asciinema :src="$withBase('/cast/installation_ubuntu18.cast')" cols="80" rows="24" speed="8" />
 
 
-[Create your first domain &raquo;](/docs/)
+[Create your first domain &raquo;](/docs/getting-started)
 

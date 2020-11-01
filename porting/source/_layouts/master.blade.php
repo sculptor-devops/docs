@@ -53,8 +53,6 @@
                 </div>
 
                 <div class="flex flex-1 justify-end items-center text-right md:pl-10">
-					<a href="/" class="mr-4 hidden lg:block">Home</a>
-					<a href="#" class="mr-4 hidden lg:block">Getting Started</a>					
 					<a href="https://sculptor-devops.github.io/" target="_blank" class="mr-4 hidden lg:block">GitHub</a>
 				
                     @if ($page->docsearchApiKey && $page->docsearchIndexName)

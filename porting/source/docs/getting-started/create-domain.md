@@ -46,3 +46,6 @@ Running deploy configure example.com: ✔
 
 ### Finsh
 Once deployed the deploy is finished your domain is ready and the site is running; now you can dig deeper in the commands to configure e.g. backups or crontabs.
+
+
+[Moving forward &raquo;](/docs/getting-started/moving-forward)

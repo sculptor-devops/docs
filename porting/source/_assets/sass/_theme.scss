@@ -9,7 +9,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @layer components {
   table {
-    @apply min-w-full text-gray-600 bg-gray-200 border-b border-gray-500 rounded p-5 shadow overflow-hidden;
+    @apply min-w-full text-gray-600 bg-gray-200 border-b border-gray-500 rounded p-5 shadow overflow-hidden table-fixed;
   }
 
   th {
@@ -22,6 +22,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   td {
-    @apply px-6 py-4 whitespace-no-wrap;
+    @apply px-6 py-4 break-words align-top;
+    word-wrap:break-word
   }
 }

@@ -8,7 +8,7 @@ section: content
 # Software
 Different version of Ubuntu LTS have some minor or major packages versions differences; while we tend to maintain same software version there are differences in major os bundle.
 
-| package  | Ubuntu 18.4 | Ubuntu 20.04 |
+| Package  | Ubuntu 18.4 | Ubuntu 20.04 |
 |-------------|-------------|-------------|
 | **PHP**  | 7.4.x | 7.4.x |
 | **MySql**  | 5.7.x | 8.0.x |

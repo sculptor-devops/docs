@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'baseUrl' => 'http://jigsaw-docs-staging.tighten.co',
+    'baseUrl' => 'http://https://sculptor-devops.github.io',
     'production' => false,
 
     // DocSearch credentials
