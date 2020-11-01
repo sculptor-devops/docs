@@ -7,8 +7,7 @@ return [
     'Getting Started' => [
         'url' => 'docs/getting-started',
         'children' => [
-            'Introduction' => 'docs/getting-started/',
-            'Installation' => 'docs/getting-started/installation/',
+            'Installation' => 'docs/getting-started/',
             'Create a domain' => 'docs/getting-started/create-domain/',
             'Move forward' => 'docs/getting-started/moving-forward/',
             'Troubleshooting' => 'docs/getting-started/troubleshooting/',

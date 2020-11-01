@@ -30,5 +30,5 @@ Save those data in a secure place. See advance usage to find additional options 
 <asciinema :src="$withBase('/cast/installation_ubuntu18.cast')" cols="80" rows="24" speed="8" />
 
 
-[Create your first domain &raquo;](/docs/getting-started)
+[Create your first domain &raquo;](/docs/getting-started/create-domain)
 
