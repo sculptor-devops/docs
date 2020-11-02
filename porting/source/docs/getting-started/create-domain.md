@@ -1,17 +1,19 @@
 ---
 title: First domain
-description: All domains commands
+description: Sculptor devops create your first domain
 extends: _layouts.documentation
 section: content
 ---
 # Create a domain
-
+The first thing you need to create is a domain, it represent the host that will be shown by the webserver and all associated services.
+Launching this command will create directory structure, configurations and deploy procedures.
 ```shell
 $ sudo sculptor domain:create example.com laravel
 Running create domain example.com: ✔
 ```
 
 ### Setup repository
+If all default preferences are fine for you the mininum setup is to define your git repository as follow.
 ```shell
 $ sudo sculptor domain:setup example.com vcs https://github.com/username/repository
 Running setup domain example.com vcs=https://github.com/username/repository: ✔

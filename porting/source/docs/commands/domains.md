@@ -1,16 +1,18 @@
 ---
 title: Domains
-description: All domains commands
+description: Sculptor devops domains commands
 extends: _layouts.documentation
 section: content
 ---
 
-# Domains
-Every domain is a web server host that have some properties like alias or SSL certificates.
+# Domains {#domains}
+Ay domain is a web server host that have some properties like alias or SSL certificates.
+The domain have a life cycle that is shown by the figure below. Generally you create it, you setup your parameters and condifurations, you apply those preferences
+and deploy to production pulling sources. The system take care that every step is respected and will check every state change.
 
-/// Domain states
+![domain states](/assets/img/states.png)
 
-## Create
+## Create (New) {#create}
 This command will create site home, configurations, files templates and base a certificate. No web server setup will be done at this stage,
 you will need to use ***setup*** and ***configure*** before ***deploy*** it. Parameters accepted are ***laravel*** and ***generic***.
 
@@ -22,7 +24,7 @@ Running create domain example.com: ✔
 > Every specialized domain type such as ***laravel*** have a standard and functional set of configurations
 > if you use ***generic*** keep in mind that before deploy you need to setup at least the deployer.php file accordingly with your needs.
 
-#### Directory structure
+#### Directory structure {#structure}
 Create command will create this directory structure; cert and logs are folders used by the webserver. Config is a template directory,
 it contains templates of all your domain configuration; if you need to customize something you should do it here. In the root of the
 domain you will find the compiled files that all services will use, are created from the configs folder files. Shared folder is the path where your application have to write all data, see delply for more informations. 
@@ -55,7 +57,7 @@ current/
 
 > Do not remove any of the created files or folders, all error can stop the web server and all domains!
 
-## Show
+## Show {#show}
 You can list all domains with this command, without parameters all domains will be shown but you can specify a domain name and a complete list of
 parameters will show up. When you show a specific domain some of the fields are calculated such as deploy url or root domain.
 
@@ -90,7 +92,7 @@ $ sudo sculptor domain:show example.com
 +------------------+-----------------------------------------------------------+
 ```
 
-## Setup
+## Setup {#setup}
 Every domain is created with a standard bunch of parameters, if you need to customize some you have to use ***setup*** to change it.
 For example if you need to change aliases, domain type or git url you need to use this command. You can use this command in every
 domain state, after it you need to run ***configure*** to apply changes to the configuration files. 
@@ -120,14 +122,7 @@ Running domain setup example.com alias=other-example.com: ✔
 |**user**| null| string | is the user needed by the database parameter to access to the db.|
 
 
-## Configure
-When you ***setup*** a domain or modify a template configuration you need to run configure to apply those modifications. All files will be created or updated in the site root path. 
-```shell
-$ sudo sculptor domain:configure example.com
-Running domain condifugre example.com: ✔
-```
-
-## Edit Templates
+#### Edit Templates
 In the ***configs/*** (see directory structure) folder you can apply your modifications to fit your needs, after this operation you can run ***configure*** to create the new configurations. In all files you can use some
 placehoders to auto complete some values. For instance when you crete a **.env** file you need to add database, user and password to create a valid and functional file; sculptor do it for you
 completing those parameters with the setup of the domain, so you don't need to know passwords or remember user or database that are stored elsewhere and linked to your domain.
@@ -152,8 +147,15 @@ completing those parameters with the setup of the domain, so you don't need to k
 |**{CERTIFICATE_KEY}**|nginx.conf| The complete path of the key file |
 |**{RETAIN}**|logrotate.conf| How many days of log you want to maintain |
 |**{COUNT}**|worker| The number of workers to spawn |
-                         
-## Delete
+
+## Configure {#configure}
+When you ***setup*** a domain or modify a template configuration you need to run configure to apply those modifications. All files will be created or updated in the site root path. 
+```shell
+$ sudo sculptor domain:configure example.com
+Running domain condifugre example.com: ✔
+```
+
+## Delete {#delete}
 This operation will remove the domain from web server hosts and delete the root folder of the domain, database and user will remain intact.
 ```shell
 $ domain:delete example.com

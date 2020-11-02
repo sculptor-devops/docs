@@ -1,6 +1,6 @@
 ---
 title: Software
-description: All domains commands
+description: Sculptor devops software packages
 extends: _layouts.documentation
 section: content
 ---

@@ -18,6 +18,7 @@ return [
         'children' => [
             'Domains' => 'docs/commands/domains',
             'Deploy' => 'docs/commands/deploy',
+            'Databases' => 'docs/commands/databases',            
             'Backups' => 'docs/commands/backups',
             'System' => 'docs/commands/system',
         ]

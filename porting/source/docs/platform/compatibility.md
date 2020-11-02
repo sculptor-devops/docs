@@ -1,6 +1,6 @@
 ---
 title: Compatibility
-description: All domains commands
+description: Sculptor devops hardware and software compatibility
 extends: _layouts.documentation
 section: content
 ---
@@ -18,3 +18,8 @@ you test with another cloud platform feel free to open an issue to update this c
 | **Digital Ocean** | Droplet | x86_64       | **Yes** | **Yes** |
 | **ScaleWay**      | Instance| x86_64       | **Yes** | No               |
 | **Vultr**      | Instance| x86_64       | **Yes** | No              |
+
+#### Hardware
+We tested sculptor with machine with at least 1GB of ram, 1CPU and 20GB of disk; Ubuntu will need 11GB of space to run, the rest if for your application.
+Sculptor can easily run with 512MB or ram, the limitation is not the sculptor itself but composer ram usage when deploy, for small installations it may run
+without problems.

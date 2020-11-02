@@ -1,6 +1,8 @@
 ---
 title: Contribute
-description: All domains commands
+description: Sculptor devops contribuion guide
 extends: _layouts.documentation
 section: content
 ---
+
+# Contribute

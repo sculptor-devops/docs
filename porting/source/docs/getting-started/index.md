@@ -1,12 +1,12 @@
 ---
 title: Installation
-description: All domains commands
+description: Sculptor devops installation
 extends: _layouts.documentation
 section: content
 ---
 
 # Create the server
-First fo all you need to login to your provider and create a machine, generally you need an Ubuntu 18.04 LTS or newer (see compatibility for more informations). 
+First fo all you need to login to your provider and create a machine, generally you need an Ubuntu 18.04 LTS or newer (see [compatibility](/docs/platform/compatibility) for more informations); see the provider documentation for this step.
 
 # Installation
 

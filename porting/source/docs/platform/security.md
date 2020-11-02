@@ -1,13 +1,11 @@
 ---
 title: Security
-description: All domains commands
+description: Sculptor devops platform security model
 extends: _layouts.documentation
 section: content
 ---
 
 # Security
-
-## Preface
 This model is what we aim for the 1.0 version of the Sculptor Devops System, will be implemented completely when main modules reach the stable beta release stage. This model can be customized using service config files, but the correct behavior is reach with this model.
 
 ## Ports and SSH

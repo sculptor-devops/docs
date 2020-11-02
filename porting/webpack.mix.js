@@ -4,6 +4,8 @@ require('laravel-mix-jigsaw');
 mix.disableSuccessNotifications();
 mix.setPublicPath('source/assets/build');
 
+mix.copy('node_modules/@fortawesome/fontawesome-free/webfonts', 'source/assets/build/webfonts');
+
 mix.js('source/_assets/js/main.js', 'js')
     .sass('source/_assets/sass/main.scss', 'css/main.css')
     .jigsaw({
@@ -17,3 +19,4 @@ mix.js('source/_assets/js/main.js', 'js')
     })
     .sourceMaps()
     .version();
+

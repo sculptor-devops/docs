@@ -1,6 +1,6 @@
 ---
 title: Upgrade
-description: All domains commands
+description: Sculptor devops upgrades
 extends: _layouts.documentation
 section: content
 ---

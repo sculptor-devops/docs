@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting
-description: All domains commands
+description: Sculptor devops troubleshooting
 extends: _layouts.documentation
 section: content
 ---
