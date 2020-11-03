@@ -78,7 +78,11 @@
         <footer class="bg-white text-center text-sm mt-12 py-4" role="contentinfo">
             <ul class="flex flex-col md:flex-row justify-center">
                 <li class="md:mr-2">
-                    &copy; <a href="https://cappellozza.com" title="Alessandro Cappellozza">Alessandro Cappellozza</a> {{ date('Y') }}.
+                    idea by <a href="https://cappellozza.com" title="Alessandro Cappellozza">Alessandro Cappellozza</a> &copy; {{ date('Y') }}.
+                </li>
+
+                <li class="md:mr-2">
+                    See <a href="/docs/about/" title="Alessandro Cappellozza">About</a> for more informations
                 </li>
             </ul>
         </footer>

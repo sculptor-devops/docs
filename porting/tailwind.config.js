@@ -17,6 +17,20 @@ module.exports = {
   },
   theme: {
     extend: {
+      colors: {
+        "blue": {
+          "100": "#fcfcfd",
+          "200": "#deddee",
+          "300": "#b9b7dc",
+          "400": "#8784c2",
+          "500": "#2e2c59",
+          "600": "#3b3871",
+          "700": "#423e7e",
+          "800": "#4b478f",
+          "900": "#534fa0"
+        }
+      },
+
       fontFamily: {
         sans: [
           'Nunito Sans'
@@ -61,7 +75,7 @@ module.exports = {
     width: ['responsive', 'focus']
   },
   plugins: [
-    function({ addUtilities }) {
+    function ({ addUtilities }) {
       const newUtilities = {
         '.transition-fast': {
           transition: 'all .2s ease-out',
