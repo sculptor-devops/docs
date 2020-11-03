@@ -191,5 +191,25 @@ Package upgraded
 | php7.4-fpm (7.4.3-4ubuntu2.4)                      |
 +----------------------------------------------------+
 Between 2020-10-15 06:48:07 and 2020-10-15 06:50:01
+```
 
+## Firewall {#firewall}
+Unde the hood Sculptor use uwf and it setup on the installer stage. You can manage with a simple command line interface to ***show***, ***reset***, ***enable*** and ***disable***.
+```shell
+$ sudo sculptor system:firewall
+Firewall show: ✔
+Active YES
++-------+-------------------------------------------------------------------+
+| Index | Rule                                                              |
++-------+-------------------------------------------------------------------+
+| 1     | 9443/tcp                   ALLOW IN    Anywhere                   |
+| 2     | 22/tcp                     ALLOW IN    Anywhere                   |
+| 3     | 80/tcp                     ALLOW IN    Anywhere                   |
+| 4     | 443/tcp                    ALLOW IN    Anywhere                   |
+| 5     | Nginx Full                 ALLOW IN    Anywhere                   |
+| 6     | 9443/tcp (v6)              ALLOW IN    Anywhere (v6)              |
+| 7     | 22/tcp (v6)                ALLOW IN    Anywhere (v6)              |
+| 8     | 80/tcp (v6)                ALLOW IN    Anywhere (v6)              |
+| 9     | 443/tcp (v6)               ALLOW IN    Anywhere (v6)              |
++-------+-------------------------------------------------------------------+
 ```
