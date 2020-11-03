@@ -4,6 +4,7 @@
 <section class="container max-w-6xl mx-auto px-6 py-10 md:py-12">
     <div class="flex flex-col-reverse mb-10 lg:flex-row lg:mb-24">
         <div class="mt-8">
+            
             <h1 id="intro-docs-template">{{ $page->siteName }}</h1>
 
             <h2 id="intro-powered-by-jigsaw" class="font-light mt-4">{{ $page->siteDescription }}</h2>
@@ -17,7 +18,9 @@
             </div>
         </div>
 
-        <img src="/assets/img/logo-large.svg" alt="{{ $page->siteName }} large logo" class="mx-auto mb-6 lg:mb-0 ">
+        <div class="mx-auto mb-6 lg:mb-0 overflow-hidden w-full lg:w-2/3 xl:w-2/3 shadow-md border rounded-md bg-gray-300" style="background-color: #002B36;">
+           <asciinema-player preload="true" theme="solarized-dark" autoplay="true" cols="80" rows="24" speed="8" src="/assets/cast/installation_ubuntu18.cast"></asciinema-player>
+        </div>
     </div>
 
     <hr class="block my-8 border lg:hidden">

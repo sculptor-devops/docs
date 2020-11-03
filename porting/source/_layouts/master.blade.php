@@ -34,6 +34,8 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,300i,400,400i,700,700i,800,800i" rel="stylesheet">
         <link rel="stylesheet" href="{{ mix('css/main.css', 'assets/build') }}">
 
+        <link rel="stylesheet" href="/assets/cast/asciinema-player.css" rel="stylesheet">
+
         @if ($page->docsearchApiKey && $page->docsearchIndexName)
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" />
         @endif
@@ -44,17 +46,14 @@
             <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
                 <div class="flex items-center">
                     <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
-						@if ($page->getUrl() !== '/')											
-							<img class="h-8 md:h-10 mr-3" src="/assets/img/logo-large.svg" alt="{{ $page->siteName }} logo" />						
-						@endif
-						
+					    <img class="h-8 md:h-10 mr-3" src="/assets/img/logo-large.svg" alt="{{ $page->siteName }} logo" />											
 	                    <h1 class="text-lg md:text-2xl text-blue-900 font-semibold hover:text-blue-600 my-0 pr-4">{{ $page->siteName }}</h1>
                     </a>
                 </div>
 
                 <div class="flex flex-1 justify-end items-center text-right md:pl-10">
                     
-					<a href="https://sculptor-devops.github.io/" target="_blank" class="mr-4 hidden lg:block">
+					<a href="https://github.com/sculptor-devops" target="_blank" class="mr-4 hidden lg:block">
                         <i class="fab fa-github fa-2x"></i>
                     </a>
 				
@@ -72,6 +71,7 @@
         </main>
 
         <script src="{{ mix('js/main.js', 'assets/build') }}"></script>
+        <script src="/assets/cast/asciinema-player.js"></script>
 
         @stack('scripts')
 
