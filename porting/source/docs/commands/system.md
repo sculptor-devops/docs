@@ -6,7 +6,7 @@ section: content
 ---
 
 # System
-
+Sculptor caracteristics can be consulted using the command below, will show the summary of the installed system.
 ```shell
 $ sudo sculptor system:info
 +-------------------+---------------------------+
@@ -25,6 +25,7 @@ $ sudo sculptor system:info
 ```
 
 ## Configuration {#configuration}
+There are some values that can be customized, you can see the current status with this command.
 ```shell
 $ sudo sculptor system:configuration show
 ```
@@ -47,13 +48,39 @@ $ sudo sculptor system:configuration show
 |**sculptor.backup.drivers.s3.endpoint**| S3 https endpoint|
 |**sculptor.backup.drivers.s3.bucket**| S3 bucket name|
 
-system:configuration {operation} {name?} {value?}
-show/get/set/reset/clear
+Each values can be changed using ***set*** operation; this value can be also restored to default using ***reset*** option in the command example below. You can also ***clear*** all setting restoring to default values.
+
+```shell
+$ sudo sculptor system:configuration set sculptor.security.hash sha256
+
+$ sudo sculptor system:configuration reset sculptor.security.hash
+
+$ sudo sculptor system:configuration clear
+```
+
+If you prefer the ***.env*** approach you can edit the application directly editing this file, for details on every single parameter see ***config/sculptor.php*** file; in this case the blueprint will backup in the same way but not will be restored the same way, you will have to redo it manually.
+
 
 ## Daemons {#dameons}
-system:daemons {operation=show} {name?}
+System daemons are gouped by type, all web related one or queue related, with this command you can do the operation such as restart or reloat to all related services.
+```shell
+$ sudo sculptor system:daemons show
+Running  show: ✔
++------------+----------+---------+
+| Service    | Group    | Running |
++------------+----------+---------+
+| mysql      | DATABASE | YES     |
+| nginx      | WEB      | YES     |
+| php7.4-fpm | WEB      | YES     |
+| redis      | QUEUE    | YES     |
+| supervisor | QUEUE    | YES     |
+| ssh        | REMOTE   | YES     |
+| fail2ban   | REMOTE   | YES     |
++------------+----------+---------+
 show
 use enable, disable, start, restart, reload, stop, status on database, web, queue, remote
+```
+Valid groups are ***database***, ***web***, ***queue***, ***remote*** (see show command to see related services). On every group you can run ***enable***, ***disable***, ***start***, ***restart***, ***reload***, ***stop***, ***status*** as normal daemons command.
 
 ## Events {#events}
 You can access to recet events from the command line, default page is 25 row long and paginated, you can specify the page ad second parameter.
@@ -66,13 +93,103 @@ $ sudo sculptor system:events
 +------------------+---------+-------+-----------------------------+
 ```
 
+## Tasks {#tasks}
+As seen for events also tasks can be shown to see status or errors; those tasks run within an hi privileged queue to manage the machine and every row represents a job such as change domain configuration, deploy, backup ad so on.
+```shell
+$ sudo sculptor system:tasks
+```
+
 ## Monitors {#monitors}
-system:monitors {operation=show}
-reset/write/show/all
+Every minute the system sample a group of monitors that you can consult to know the machine state history; for the number of samples retained see the syem configuration parameter ***sculptor.monitors.rotate***. The command with no parameters show the last sample.
+```shell
+$ sudo sculptor system:monitors
+Monitors show: ✔
++-------------+---------------------+
+| Monitor     | Value               |
++-------------+---------------------+
+| Cpu load    | 0.11                |
+| sda free    | 49GB                |
+| sda total   | 62GB                |
+| sda tps     | 3.58                |
+| sda reads/s | 35.86 kB            |
+| sda write/s | 71.14 kB            |
+| Ram total   | 2GB                 |
+| Ram used    | 781MB               |
+| Uptime      | 3 d 0 h 4 m         |
+| Timestamp   | 2020-10-30 11:15:02 |
++-------------+---------------------+
+```
+
+> Monitors are stored in memory, do not raise too mouch rotate value!
+
+You can also see all samples in memory by running a ***all*** operation, all columns will be human readable. Use ***reset*** command to clear all the sampled data.
+```shell
+$ sudo sculptor system:monitors all
+Monitors all: ✔
++----------+----------+-----------+---------+-------------+-------------+-----------+----------+---------------+---------------------+
+| Cpu load | sda free | sda total | sda tps | sda reads/s | sda write/s | Ram total | Ram used | Uptime        | Timestamp           |
++----------+----------+-----------+---------+-------------+-------------+-----------+----------+---------------+---------------------+
+| 0.04     | 49GB     | 62GB      | 3.58    | 36.35 kB    | 71.66 kB    | 2GB       | 766MB    | 2 d 23 h 5 m  | 2020-10-30 10:16:02 |
+| 0.15     | 49GB     | 62GB      | 3.58    | 36.34 kB    | 71.66 kB    | 2GB       | 766MB    | 2 d 23 h 6 m  | 2020-10-30 10:17:01 |
++----------+----------+-----------+---------+-------------+-------------+-----------+----------+---------------+---------------------+
+
+$ sudo sculptor system:monitors reset
+```
 
 ## Upgrades {#upgrades}
-system:upgrades {operation=list}
-list/check .. index
+The system perform autonomous unattended upgrades and there is no need to act in any direction. But you can need to know when performed and which package were
+upgraded. With this commads you can have a log of each performed upgrade and you can see the detail of every operation.
+```shell
+$ sudo sculptor system:upgrades
++-------------------+--------+
+| Setting           | Status |
++-------------------+--------+
+| Active            | YES    |
+| Upgraded recently | NO     |
++-------------------+--------+
++-------+-----------------------------------+----------+
+| Index | Event                             | Packages |
++-------+-----------------------------------+----------+
+| 1     | Thu Oct 08 2020 06:52:39 GMT+0000 | 13       |
+| 2     | Thu Oct 15 2020 06:49:18 GMT+0000 | 20       |
+| 3     | Fri Oct 16 2020 06:37:21 GMT+0000 | 0        |
+| 4     | Wed Oct 21 2020 06:09:42 GMT+0000 | 9        |
+| 5     | Tue Oct 27 2020 06:33:54 GMT+0000 | 4        |
+| 6     | Wed Oct 28 2020 06:13:46 GMT+0000 | 7        |
+| 7     | Thu Oct 29 2020 06:25:31 GMT+0000 | 2        |
++-------+-----------------------------------+----------+
 
-## Tasks {#tasks}
-system:tasks {limit=25} {page=1}
+Use system:upgrades <INDEX> to show complete event
+
+$ sudo sculptor system:upgrades 7
++------------------------------------------------------------------------------------------+
+| Selecting previously unselected package linux-modules-5.4.0-51-generic.                  |
+| .....                                                                                    |
+| Processing triggers for php7.4-fpm (7.4.3-4ubuntu2.4) ...                                |
++------------------------------------------------------------------------------------------+
+Package upgraded
++----------------------------------------------------+
+| linux-headers-5.4.0-51 (5.4.0-51.56)               |
+| linux-modules-5.4.0-51-generic (5.4.0-51.56)       |
+| linux-headers-5.4.0-51-generic (5.4.0-51.56)       |
+| linux-headers-generic (5.4.0.51.54)                |
+| linux-image-5.4.0-51-generic (5.4.0-51.56)         |
+| linux-modules-extra-5.4.0-51-generic (5.4.0-51.56) |
+| linux-image-generic (5.4.0.51.54)                  |
+| linux-generic (5.4.0.51.54)                        |
+| php7.4-common (7.4.3-4ubuntu2.4)                   |
+| php7.4-mysql (7.4.3-4ubuntu2.4)                    |
+| php7.4-bcmath (7.4.3-4ubuntu2.4)                   |
+| php7.4-readline (7.4.3-4ubuntu2.4)                 |
+| php7.4-mbstring (7.4.3-4ubuntu2.4)                 |
+| php7.4-zip (7.4.3-4ubuntu2.4)                      |
+| php7.4-opcache (7.4.3-4ubuntu2.4)                  |
+| php7.4-sqlite3 (7.4.3-4ubuntu2.4)                  |
+| php7.4-json (7.4.3-4ubuntu2.4)                     |
+| php7.4-xml (7.4.3-4ubuntu2.4)                      |
+| php7.4-cli (7.4.3-4ubuntu2.4)                      |
+| php7.4-fpm (7.4.3-4ubuntu2.4)                      |
++----------------------------------------------------+
+Between 2020-10-15 06:48:07 and 2020-10-15 06:50:01
+
+```

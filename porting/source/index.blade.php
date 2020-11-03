@@ -24,47 +24,65 @@
 
     <div class="md:flex -mx-2 -mx-4">
         <div class="mb-8 mx-3 px-2 md:w-1/3">
-            <img src="/assets/img/icon-window.svg" class="h-12 w-12" alt="window icon">
+            <div class="shadow-md border rounded-md p-5 bg-box">
+            <i class="fab fa-git-square fa-4x block h-12" style="color: #2d2b57;"></i>
 
-            <h3 id="intro-laravel" class="text-2xl text-blue-900 mb-0">PHP Oriented</h3>
+            <h3 id="intro-laravel" class="text-2xl text-blue-900 mb-0">Repository Oriented</h3>
 
             <p>Zero downtime deploy, control all you need with simple commands.</p>
+            </div>
         </div>
 
-        <div class="mx-3 px-2 md:w-1/3">
-            <img src="/assets/img/icon-terminal.svg" class="h-12 w-12" alt="terminal icon">
+        <div class="mx-3 px-2 md:w-1/3 mb-8">
+            <div class="shadow-md border rounded-md p-5 bg-box">        
+            <i class="fas fa-terminal fa-3x block h-12" style="color: #2d2b57;"></i>
 
             <h3 id="intro-mix" class="text-2xl text-blue-900 mb-0">Ready in minutes</h3>
 
             <p>Install an entire machine with PHP, Nginx, MySql, Redis with no action.</p>
+            </div>
         </div>
 
         <div class="mb-8 mx-3 px-2 md:w-1/3">
-            <img src="/assets/img/icon-stack.svg" class="h-12 w-12" alt="stack icon">        
+            <div class="shadow-md border rounded-md p-5 bg-box">
+            <i class="fas fa-user-edit fa-3x block h-12" style="color: #2d2b57;"></i>
 
             <h3 id="intro-markdown" class="text-2xl text-blue-900 mb-0">Customizable</h3>
 
             <p>You can change the deploy pipeline and adapt to you workflow.</p>
+            </div>
         </div>        
     </div>
 
     <div class="md:flex -mx-2 -mx-4">
         <div class="mb-8 mx-3 px-2 md:w-1/3">
+            <div class="shadow-md border rounded-md p-5 bg-box">
+            <i class="fas fa-lock fa-3x block h-12" style="color: #2d2b57;"></i>
+
             <h3 id="intro-laravel" class="text-2xl text-blue-900 mb-0">Secure</h3>
 
             <p>Automated backup and security patch out of the box.</p>
+            </div>
         </div>
 
         <div class="mb-8 mx-3 px-2 md:w-1/3">
+            <div class="shadow-md border rounded-md p-5 bg-box">
+            <i class="fas fa-network-wired fa-3x block h-12" style="color: #2d2b57;"></i>
+
             <h3 id="intro-markdown" class="text-2xl text-blue-900 mb-0">Decentralized</h3>
 
             <p>You can control one or more machine with fluent api.</p>
+            </div>
         </div>
 
         <div class="mx-3 px-2 md:w-1/3">
+            <div class="shadow-md border rounded-md p-5 bg-box">
+            <i class="fab fa-laravel fa-3x block h-12" style="color: #2d2b57;"></i>
+
             <h3 id="intro-mix" class="text-2xl text-blue-900 mb-0">Laravel</h3>
 
             <p>Your favourite framework is a first class citizen.</p>
+            </div>
         </div>
     </div>
 

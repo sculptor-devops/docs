@@ -40,7 +40,7 @@
     </head>
 
     <body class="flex flex-col justify-between min-h-screen bg-gray-100 text-gray-800 leading-normal font-sans">
-        <header class="flex items-center bg-white border-b h-24 mb-8 py-4" role="banner">
+        <header class="flex items-center bg-white border-b h-24 mb-8  xl:mb-0 lg:mb-0 py-4" role="banner">
             <div class="container flex items-center max-w-8xl mx-auto px-4 lg:px-8">
                 <div class="flex items-center">
                     <a href="/" title="{{ $page->siteName }} home" class="inline-flex items-center">
@@ -67,7 +67,7 @@
             @yield('nav-toggle')
         </header>
 
-        <main role="main" class="w-full flex-auto">
+        <main role="main" class="w-full flex-auto bg-main">
             @yield('body')
         </main>
 

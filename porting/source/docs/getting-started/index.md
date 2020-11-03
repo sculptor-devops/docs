@@ -13,7 +13,7 @@ First fo all you need to login to your provider and create a machine, generally 
 Login into your remote machine via SSH and paste this command, if you are in with a sudoer user (not root) run this command in the bash:
 
 > All operations have to be done on a new clean machine, **DO NOT RUN** on already installed machine.
-> If you are logged with the **ROOT** user you can remove the sudo command before **setup.sh**.
+> If you are logged with the **ROOT** user you can remove the **sudo** command before **sudo sh setup.sh**.
 
 ``` shell
 $ wget -O setup.sh \
