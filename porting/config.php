@@ -6,7 +6,7 @@ return [
     'baseUrl' => '',
     'production' => false,
     'siteName' => 'Sculptor',
-    'siteDescription' => 'Beautiful automated server administrator',
+    'siteDescription' => 'Beautiful & Automated Server Administrator',
 
     // Algolia DocSearch credentials
     'docsearchApiKey' => '',

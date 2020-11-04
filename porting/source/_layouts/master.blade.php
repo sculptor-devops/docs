@@ -53,7 +53,7 @@
 
                 <div class="flex flex-1 justify-end items-center text-right md:pl-10">
                     
-					<a href="https://github.com/sculptor-devops" target="_blank" class="mr-4 hidden lg:block">
+					<a href="https://github.com/sculptor-devops" target="_blank" class="mr-2 lg:mr-4">
                         <i class="fab fa-github fa-2x"></i>
                     </a>
 				
