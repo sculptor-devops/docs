@@ -20,7 +20,7 @@ Running setup domain example.com vcs=https://github.com/username/repository: ✔
 ```
 > If you work with github we suggest to generate a 
 > [personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token)
-> the url will look something like ***https://your-access-token@github.com/username/repository***
+> the url will look something like ***https://your-access-token@github.com/username/repository***, you can also setup a single repository [deploy key](https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys)
 
 ### Configure
 Once you are ready with customizations you need to apply them to your domain with the command below.
