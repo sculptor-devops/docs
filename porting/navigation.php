@@ -13,6 +13,9 @@ return [
             'Troubleshooting' => '/docs/getting-started/troubleshooting/',
         ],
     ],
+    'Repository' => [
+        'url' => '/docs/repository',
+    ],
     'Commands' => [
         'url' => '/docs/commands/domains',
         'children' => [
