@@ -6,6 +6,13 @@ section: content
 ---
 
 # Deploy
+
+- [Structure](#structure)
+- [Crontab](#crontab)
+- [Worker](#worker)
+- [Enable](#enable)
+- [Disable](#disable)
+
 Unde the hood Sculptor use [php deployer](https://deployer.org/docs/getting-started.html) to run all code provisioning operations such as
 clone, pull and subsequent operations; e.g. php artisan migrate for a Laravel application. The deploy script is customizable in the ***configs/deployer.php***
 after that you need to run [configure command](/docs/commands/domains/#configure). Deployer run a series of stage to run the provisionig, the standard command that run the default stage is ***deploy***. The default stages are two, the first is the ***install*** stage that run the first time the system pull your code,

@@ -6,6 +6,17 @@ section: content
 ---
 
 # Domains {#domains}
+
+- [Create](#create)
+ - [Directory structure](#structure)
+- [Show](#show)
+- [Setup](#setup)
+ - [Parameters](#setup-parameters)
+ - [Edit templates](#edit-templates)
+ - [Placeholders](#placeholders)
+- [Configure](#configure)
+- [Delete](#delete)
+
 Ay domain is a web server host that have some properties like alias or SSL certificates.
 The domain have a life cycle that is shown by the figure below. Generally you create it, you setup your parameters and condifurations, you apply those preferences
 and deploy to production pulling sources. The system take care that every step is respected and will check every state change.
@@ -102,7 +113,7 @@ $ domain:setup example.com alias other-example.com
 Running domain setup example.com alias=other-example.com: ✔
 ```
 
-#### Valid parameters
+#### Valid parameters {#setup-parameters}
 
 | Parameter  | Default | Values | Description |
 |-------------|-------------|-------------|
@@ -122,12 +133,12 @@ Running domain setup example.com alias=other-example.com: ✔
 |**user**| null| string | is the user needed by the database parameter to access to the db.|
 
 
-#### Edit Templates
+#### Edit Templates {#edit-templates}
 In the ***configs/*** (see directory structure) folder you can apply your modifications to fit your needs, after this operation you can run ***configure*** to create the new configurations. In all files you can use some
 placehoders to auto complete some values. For instance when you crete a **.env** file you need to add database, user and password to create a valid and functional file; sculptor do it for you
 completing those parameters with the setup of the domain, so you don't need to know passwords or remember user or database that are stored elsewhere and linked to your domain.
 
-#### Placeholders
+#### Placeholders {#placeholders}
 | Parameter  | File | Description |
 |------------|------|-------------|
 |**{DOMAINS}**|all|aa|

@@ -3,7 +3,7 @@
 return [
     'Introduction' => [
         'url' => '/docs/introduction'
-    ],    
+    ],
     'Getting Started' => [
         'url' => '/docs/getting-started',
         'children' => [

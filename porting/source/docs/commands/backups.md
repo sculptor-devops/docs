@@ -6,6 +6,15 @@ section: content
 ---
 
 # Backups
+
+- [Create](#create)
+- [Show](#show)
+- [Setup](#setup)
+- [Driver](#driver)
+- [Run](#run)
+- [Blueprint](#blueprint)
+- [Delete](#delete)
+
 You can create a backup job like you did with a domain by running a command; backups can be of three different types. The first is ***database*** and it will backup the specified database. The second is ***domain*** and do the same thig as the database backup do but for files; so if you want to backup an entire site you need to create a domain backup and a database backup, this due to the fact that a database can be attached to more than one domain. Domain backup will take care of the configurations in ***configs*** path and file in ***shared*** folder; this because all your application storage must be mapped on this directory (see [deploy](/docs/commands/deploy#structure) for more informations). The third type is the ***blueprint*** type and is meant to create a backup of all metadata of the Sculpture installation; with this backup you can recreate a mirror of the machine in minutes.
 
 
@@ -62,7 +71,6 @@ $ sudo sculptor backup:blueprint load /tmp/server_blueprint.yml
 Blueprint load: /tmp/server_blueprint.yml: ✔
 ```
 > Do not run ***load*** command in a production or a ***not empty*** machine, you can lose evrything!
-
 
 ## Delete {#delete}
 ```shell

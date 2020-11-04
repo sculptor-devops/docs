@@ -6,6 +6,15 @@ section: content
 ---
 
 # System
+
+- [Configuration](#configuration)
+- [Daemons](#dameons)
+- [Events](#events)
+- [Tasks](#tasks)
+- [Monitors](#monitors)
+- [Upgrades](#upgrades)
+- [Firewall](#firewall)
+
 Sculptor caracteristics can be consulted using the command below, will show the summary of the installed system.
 ```shell
 $ sudo sculptor system:info
