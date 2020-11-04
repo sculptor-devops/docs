@@ -14,14 +14,14 @@ set('repository', 'https://github.com/laravel/laravel.git');
 
 For a public repository the clone is not a problem, but with a preivate one you need some step forward to permit autentication.
 
-### Personal access token {#personal-access-token}
+## Personal access token {#personal-access-token}
 Some git hoster like GitHub let you to create a [personal access token](https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/creating-a-personal-access-token) from your security settings, this token can act like your account so, to be safe, grant only read access.
 
 ```php
 set('repository', 'https://<<MY-ACCESS-TOKEN>>@github.com/laravel/laravel.git');
 ```
 
-### Deploy keys {#deploy-keys}
+## Deploy keys {#deploy-keys}
 You can setup a specific key for a repository like [deploy key](https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys) function of GitHub. Once generated you need to put your key in the root of your domain e.g. id_rsa. Then you need to add an env variable to the deploy.php file: note that in the repository you need to use git url not https one.
 
 ```php
@@ -54,7 +54,7 @@ set('env', [
 ```
 
 
-#### Username and Password {#user-password}
+## Username and Password {#user-password}
 To autenthicate using http you can specify user and password in the git url. This is the wrost practice and is discuraged, use only if no other way work.
 
 ```php
