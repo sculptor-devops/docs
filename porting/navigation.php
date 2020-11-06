@@ -16,6 +16,9 @@ return [
     'Repository' => [
         'url' => '/docs/repository',
     ],
+    'Webhooks' => [
+        'url' => '/docs/webhooks',
+    ],    
     'Commands' => [
         'url' => '/docs/commands/domains',
         'children' => [
