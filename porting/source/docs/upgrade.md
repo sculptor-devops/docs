@@ -29,4 +29,7 @@ Successfully deployed!
 
 $ sudo dep deploy:migrate
 ✔ Executing task deploy:migrate
+
+$ sudo sculptor queue:restart
+Broadcasting queue restart signal.
 ```

@@ -15,6 +15,7 @@ section: content
  - [Edit templates](#edit-templates)
  - [Placeholders](#placeholders)
 - [Configure](#configure)
+- [Templates](#templates)
 - [Delete](#delete)
 
 Ay domain is a web server host that have some properties like alias or SSL certificates.
@@ -23,7 +24,7 @@ and deploy to production pulling sources. The system take care that every step i
 
 ![domain states](/assets/img/states.png)
 
-## Create (New) {#create}
+## [Create (New)](#create) {#create}
 This command will create site home, configurations, files templates and base a certificate. No web server setup will be done at this stage,
 you will need to use ***setup*** and ***configure*** before ***deploy*** it. Parameters accepted are ***laravel*** and ***generic***.
 
@@ -146,8 +147,9 @@ completing those parameters with the setup of the domain, so you don't need to k
 |**{USER}**|all| The system user that run every script tha for now is always www|
 |**{NAME}**|all| The domain name as recorded on the db|
 |**{PATH}**|all| The system root path e.g /home/www/sites/example.com |
-|**{HOME}**|all| The home as recorded in the db, the default is public |
+|**{CURRENT}**|all| The root of the application e.g /home/www/sites/example.com/current |
 |**{PUBLIC}**|all| The home directory e.g. /home/www/sites/example.com/current/public |
+|**{HOME}**|all| The home as recorded in the db, the default is public |
 |**{REPOSITORY}**|deployer.php| The url of the repository, see vcs setup parameter |
 |**{BRANCH}**|deployer.php| The branch of the repository, see branch setup parameter |
 |**{DATABASE}**|env| The name of the database linket to this domain |
@@ -164,6 +166,19 @@ When you ***setup*** a domain or modify a template configuration you need to run
 ```shell
 $ sudo sculptor domain:configure example.com
 Running domain condifugre example.com: ✔
+```
+
+## Templates {#templates}
+You can restore ***configs*** and ***deploy*** templates to default values, this can occur also when you upgrade sculptor to a newer version and you whant to apply new configurations; because is a potentially descructive operaion, because will delete all your config customizaionts, you will be ascked to confirm.
+
+```shell
+$ sudo sculptor domain:templates example.com
+ This operation will DELETE ALL customizations to example.com configs and deploy, do you want to continue?
+(type yes or y to continue):
+ > yes
+
+Domain templates example.com: ✔
+Now you need to run domain:configure example.com to make modifications
 ```
 
 ## Delete {#delete}
