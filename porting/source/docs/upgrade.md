@@ -32,4 +32,7 @@ $ sudo dep deploy:migrate
 
 $ sudo sculptor queue:restart
 Broadcasting queue restart signal.
+
+$ sudo sculptor system:daemons reaload web
+Running web reload: ✔
 ```
