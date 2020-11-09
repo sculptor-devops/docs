@@ -27,21 +27,21 @@ $ sudo sculptor domain:show example.com
 | deploy command    | deploy                                                    |
 | install command   | deploy:install                                            |
 | git uri           | https://github.com/laravel/laravel.git                    |
-| deploy url        | https://1.2.3.4:9443/api/v1/deploy/abc1234/abc1234        |
+| deploy url        | https://1.2.3.4:9443/webhooks/v1/deploy/abc1234/abc1234   |
 | deploy provider   | github                                                    |
 | deploy branch     | master                                                    |
 +-------------------+-----------------------------------------------------------+
 ```
-> In this case the URL il ***https://1.2.3.4:9443/api/v1/deploy/abc1234/abc1234***
+> In this case the URL il ***https://1.2.3.4:9443/webhooks/v1/deploy/abc1234/abc1234***
 
 ## Github {#github}
 I your provider is setupped to github (the default) you can follow the istructions of the documentation at [Github webhooks](https://docs.github.com/en/free-pro-team@latest/developers/webhooks-and-events/webhooks). You only need to open your repository ***settings*** than ***Webhooks*** and press ***Add webhook***; there setup the data as seen in the example below.
 
-|Parameter                     | Value                                              |
-|------------------------------|----------------------------------------------------|
-|***Payload URL***             | https://1.2.3.4:9443/api/v1/deploy/abc1234/abc1234 |
-|***Content type***            | application/json                                   |
-|***Enable SSL verification*** | No, set to Disable (not recommended)               |
+|Parameter                     | Value                                                   |
+|------------------------------|---------------------------------------------------------|
+|***Payload URL***             | https://1.2.3.4:9443/webhooks/v1/deploy/abc1234/abc1234 |
+|***Content type***            | application/json                                        |
+|***Enable SSL verification*** | No, set to Disable (not recommended)                    |
 
 ## Custom {#custom}
 If you have another provider of git repository you can use it in the same way but remember that all controls and check validations will not be done by the custom provider and the branch corrispondence will not be granted. To change this settings of the domain see [setup](/docs/commands/domains/#setup) command and set provider to custom.
