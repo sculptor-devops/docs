@@ -13,7 +13,7 @@ This is the plan for the **1.0 release**, for now the project in in active devel
 |-----------------|---------|--------------|
 | **Installer**   | [![Latest Version on Packagist](https://img.shields.io/packagist/v/sculptor-devops/installer.svg?style=flat-square)](https://packagist.org/packages/sculptor-devops/installer)   | Stable |
 | **Foundation**  | [![Latest Version on Packagist](https://img.shields.io/packagist/v/sculptor-devops/foundation.svg?style=flat-square)](https://packagist.org/packages/sculptor-devops/foundation) | Stable |
-| **Agent**       | [![Latest Version on Packagist](https://img.shields.io/packagist/v/sculptor-devops/sculptor.svg?style=flat-square)](https://packagist.org/packages/sculptor-devops/foundation)   | Beta   |
+| **Agent**       | [![Latest Version on Packagist](https://img.shields.io/packagist/v/sculptor-devops/sculptor.svg?style=flat-square)](https://packagist.org/packages/sculptor-devops/sculptor)   | Beta   |
 
 #### Agent
 |Step | Status |

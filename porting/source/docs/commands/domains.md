@@ -150,8 +150,12 @@ completing those parameters with the setup of the domain, so you don't need to k
 |**{CURRENT}**|all| The root of the application e.g /home/www/sites/example.com/current |
 |**{PUBLIC}**|all| The home directory e.g. /home/www/sites/example.com/current/public |
 |**{HOME}**|all| The home as recorded in the db, the default is public |
+|**{PHP_VERSION}**|all| The version of the php interpreter, default is 7.4 |
 |**{REPOSITORY}**|deployer.php| The url of the repository, see vcs setup parameter |
 |**{BRANCH}**|deployer.php| The branch of the repository, see branch setup parameter |
+|**{DATABASE_DRIVER}**|env| Database driver to be used, default is mysql |
+|**{DATABASE_HOST}**|env| The database server address, default is localost/127.0.0.1 |
+|**{DATABASE_PORT}**|env| The database host port, default is 3306 |
 |**{DATABASE}**|env| The name of the database linket to this domain |
 |**{DATABASE_USERNAME}**|env| The username lined to tho this domain |
 |**{DATABASE_PASSWORD}**|env| The user associated password |          
