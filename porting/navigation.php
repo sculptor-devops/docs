@@ -26,6 +26,7 @@ return [
             'Deploy' => '/docs/commands/deploy',
             'Databases' => '/docs/commands/databases',            
             'Backups' => '/docs/commands/backups',
+            'Alarms' => '/docs/commands/alarms',
             'System' => '/docs/commands/system',
         ]
     ],

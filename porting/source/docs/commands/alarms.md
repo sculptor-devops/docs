@@ -8,7 +8,6 @@ section: content
 # System
 
 - [Configuration](#configuration)
-- [Users](#user)
 - [Daemons](#dameons)
 - [Events](#events)
 - [Tasks](#tasks)
@@ -32,24 +31,6 @@ $ sudo sculptor system:info
 | Operating system  | 20.04.1 LTS (Focal Fossa) |
 | Architecture      | x86_64 64 bit             |
 +-------------------+---------------------------+
-```
-
-## User {#user}
-You need to authenticate to use rest API, so you need to create a user.
-```shell
-$ sudo sculptor system:user create user@example.com
-
-$ sudo sculptor system:user password user@example.com
-
-$ sudo sculptor system:user delete user@example.com
-
-$ sudo sculptor system:user show
-```
-You may also need to manage user generated token, you can list and revoke.
-```shell
-$ sudo sculptor system:user token user@example.com
-
-$ sudo sculptor system:user revoke 123abc
 ```
 
 ## Configuration {#configuration}

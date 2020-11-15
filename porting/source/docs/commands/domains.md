@@ -15,6 +15,7 @@ section: content
  - [Edit templates](#edit-templates)
  - [Placeholders](#placeholders)
 - [Configure](#configure)
+- [Certbot](#certbot)
 - [Templates](#templates)
 - [Delete](#delete)
 
@@ -133,6 +134,8 @@ Running domain setup example.com alias=other-example.com: ✔
 |**database**| null| string| is the database that the application will use, must be a valid one.|
 |**user**| null| string | is the user needed by the database parameter to access to the db.|
 
+> If you setup **certificate** parameter with **lets-encrypt** remember to activate with certbot command (see below).
+
 
 #### Edit Templates {#edit-templates}
 In the ***configs/*** (see directory structure) folder you can apply your modifications to fit your needs, after this operation you can run ***configure*** to create the new configurations. In all files you can use some
@@ -169,7 +172,17 @@ completing those parameters with the setup of the domain, so you don't need to k
 When you ***setup*** a domain or modify a template configuration you need to run configure to apply those modifications. All files will be created or updated in the site root path. 
 ```shell
 $ sudo sculptor domain:configure example.com
-Running domain condifugre example.com: ✔
+Running domain confiugre example.com: ✔
+```
+
+## Certbot {#certbot}
+This command communicate with the certbot tool to obtain Let's Encrypts certificates; to run this command need the domain to be deployed before and be available on the web. The first operation is ***register*** and will run the certbot for the first time. The second command ***deploy*** will apply certificates to your domain. After this operations the certificate will auto-renew and will be managed by the certbot.
+```shell
+$ sudo sculptor domain:certbot example.com register
+Running certbot register example.com: ✔
+
+$ sudo sculptor domain:certbot example.com deploy
+Running certbot register example.com: ✔
 ```
 
 ## Templates {#templates}
