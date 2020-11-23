@@ -8,6 +8,13 @@
 <section class="container max-w-8xl mx-auto px-6 md:px-8 py-4">
     <div class="flex flex-col lg:flex-row">
         <nav id="js-nav-menu" class="nav-menu hidden lg:block">
+            <ul class="my-0">
+                <li class="pl-4">
+                    <a href="https://github.com/sculptor-devops" target="_blank" class="nav-menu__item">
+                                <i class="fab fa-github fa"></i> GitHub
+                    </a>
+                </li>        
+            </ul>
             @include('_nav.menu', ['items' => $page->navigation])
         </nav>
 

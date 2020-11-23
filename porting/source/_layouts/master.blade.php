@@ -51,15 +51,15 @@
                     </a>
                 </div>
 
-                <div class="flex flex-1 justify-end items-center text-right md:pl-10">
-                    
-					<a href="https://github.com/sculptor-devops" target="_blank" class="mr-2 lg:mr-4">
-                        <i class="fab fa-github fa-2x"></i>
-                    </a>
-				
+                <div class="flex flex-1 justify-end items-center text-right md:pl-10">				
                     @if ($page->docsearchApiKey && $page->docsearchIndexName)
                         @include('_nav.search-input')
                     @endif
+                </div>
+                <div class="ml-2 mt-1">
+                    <a href="https://github.com/sculptor-devops" target="_blank">
+                        <i class="fab fa-github fa-2x"></i>
+                    </a>
                 </div>
             </div>
 
