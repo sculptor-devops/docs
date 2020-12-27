@@ -13,7 +13,7 @@ return [
             'Troubleshooting' => '/docs/getting-started/troubleshooting/',
         ],
     ],
-    'Repository' => [
+    'Repository setup' => [
         'url' => '/docs/repository',
     ],
     'Webhooks' => [
@@ -26,7 +26,7 @@ return [
             'Deploy' => '/docs/commands/deploy',
             'Databases' => '/docs/commands/databases',            
             'Backups' => '/docs/commands/backups',
-            # 'Alarms' => '/docs/commands/alarms',
+            'Alarms' => '/docs/commands/alarms',
             'System' => '/docs/commands/system',
         ]
     ],

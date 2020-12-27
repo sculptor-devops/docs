@@ -8,13 +8,17 @@ section: content
 # System
 
 - [Configuration](#configuration)
-- [Users](#user)
+- [User](#user)
 - [Daemons](#dameons)
 - [Events](#events)
 - [Tasks](#tasks)
 - [Monitors](#monitors)
 - [Upgrades](#upgrades)
 - [Firewall](#firewall)
+- [Schedules](#schedules)
+- [Note](#note)
+- [Clear](#clear)
+- [Logs](#logs)
 
 Sculptor caracteristics can be consulted using the command below, will show the summary of the installed system.
 ```shell
@@ -241,3 +245,35 @@ Active YES
 | 9     | 443/tcp (v6)               ALLOW IN    Anywhere (v6)              |
 +-------+-------------------------------------------------------------------+
 ```
+## Schedules {#schedules}
+Show a perspective of scheuled backups or alarms of the system with some details.
+```shell
+$ sudo sculptor system:note 
+```
+
+## Note {#note}
+This is an utility to put a note on sculptor logs, useful when you interct from bash scripts.
+```shell
+$ sudo sculptor system:schedules 
+```
+
+## Clear {#clear}
+This is already scheduled daily by sculptor but you can run it manually; clean old queue tasks and events.
+```shell
+$ sudo sculptor system:clear
+```
+
+## Logs {#logs}
+Show and inspect sculptor logs, files are grouped by system user.
+```shell
+$ sudo sculptor system:logs
+```
+
+
+
+
+
+
+
+
+
