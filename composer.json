@@ -1,4 +1,8 @@
 {
+    "name": "sculptor-devops/docs",
+    "description": "Sculptor Devops Agent Documentation",    
+    "type": "project",
+    
     "require": {
         "tightenco/jigsaw": "^1.3",
         "tightenco/jigsaw-docs-template": "^1.0",
