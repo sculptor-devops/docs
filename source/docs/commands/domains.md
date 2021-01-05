@@ -145,7 +145,7 @@ completing those parameters with the setup of the domain, so you don't need to k
 #### Placeholders {#placeholders}
 | Parameter  | File | Description |
 |------------|------|-------------|
-|**{DOMAINS}**|all|aa|
+|**{DOMAINS}**|all| Main domain name and alias that serve this site |
 |**{URL}**|all| The mail url of the domain https://example.com|
 |**{USER}**|all| The system user that run every script tha for now is always www|
 |**{NAME}**|all| The domain name as recorded on the db|

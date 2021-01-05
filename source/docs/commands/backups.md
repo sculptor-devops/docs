@@ -72,6 +72,8 @@ Blueprint load: /tmp/server_blueprint.yml: ✔
 ```
 > Do not run ***load*** command in a production or a ***not empty*** machine, you can lose evrything!
 
+You can also use **dry** istead of load just to see if the file is working an emulate all the operation that will run. The **bash** operation wil run a dry run and convert it to a bash file if you need to export and customize operations.
+
 ## Delete {#delete}
 ```shell
 $ sudo sculptor backup:delete 1

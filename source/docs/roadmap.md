@@ -30,3 +30,4 @@ This is the plan for the **1.0 release**, for now the project in in active devel
 - Control panel.
 - Multiple PHP version.
 - Code refactory and consolidation.
+- PostgreSql support.
