@@ -15,7 +15,7 @@ jobs:
       run: composer validate
 
     - name: Composer
-      run: composer install --prefer-dist --no-progress --no-suggest
+      run: composer install --no-progress --no-suggest
 
     - name: Node
       run: npm install
