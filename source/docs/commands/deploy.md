@@ -31,7 +31,7 @@ After this command the domain i enabled and reachable from the web, webserver co
 
 #### Directory structure {#structure}
 Deployer use specific folder to run, the main is ***releases*** that contain all pull the system ever done from the beginngin. To achive the zero downtime deploy
-the current pull is linked to the ***current*** directory. Another important folder is the ***shared*** one, there is all data that your application need to write to disk. When you pull your sources you need to maintain this files as the previous version, so all data that need to be written to disk are mapped as a link to this folder. For instance ***.env*** file and ***storage*** folders for a Laravel application are linked from ***shared/.env*** and ***stared/storage*** to current directory.
+the current pull is linked to the ***current*** directory. Another important folder is the ***shared*** one, there is all data that your application need to write to disk. When you pull your sources you need to maintain this files as the previous version, so all data that need to be written to disk are mapped as a link to this folder. For instance ***.env*** file and ***storage*** folders for a Laravel application are linked from ***shared/.env*** and ***shared/storage*** to current directory.
 ```shell
 $ ls -l /home/www/sites/example.com/
 lrwxrwxrwx 1 www www 40 Oct 27 13:17 current -> /home/www/sites/example.com/releases/11
