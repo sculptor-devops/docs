@@ -22,6 +22,17 @@ jobs:
       
     - name: Production
       run: npm run production
+      
+    - name: Pushes to another repository
+      uses: cpina/github-action-push-to-another-repository@master
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        source-directory: 'build_production'
+        destination-github-username: 'Alessandro Cappellozza'
+        destination-repository-name: '/'
+        user-email: alessandro.cappellozza@gmail.com
+      
   
 
 
