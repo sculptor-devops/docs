@@ -19,9 +19,9 @@ section: content
 - [Templates](#templates)
 - [Delete](#delete)
 
-Ay domain is a web server host that have some properties like alias or SSL certificates.
-The domain have a life cycle that is shown by the figure below. Generally you create it, you setup your parameters and condifurations, you apply those preferences
-and deploy to production pulling sources. The system take care that every step is respected and will check every state change.
+A domain is a web server host that have some properties like aliases or SSL certificates.
+The domain have a life cycle that is shown in the figure below. Generally you create it, setup parameters and configurations, apply preferences
+and deploy to production pulling sources. The system takes care that every step is respected and will check every state change.
 
 ![domain states](/assets/img/states.png)
 
@@ -35,13 +35,13 @@ Running create domain example.com: ✔
 ```
 
 > Every specialized domain type such as ***laravel*** have a standard and functional set of configurations
-> if you use ***generic*** keep in mind that before deploy you need to setup at least the deployer.php file accordingly with your needs.
+> if you use ***generic*** keep in mind that before deploy you need to setup at least the deployer.php file accordingly to your needs.
 
 #### Directory structure {#structure}
-Create command will create this directory structure; cert and logs are folders used by the webserver. Config is a template directory,
+Create command will create the following directory structure; cert and logs are folders used by the webserver. Config is a template directory,
 it contains templates of all your domain configuration; if you need to customize something you should do it here. In the root of the
-domain you will find the compiled files that all services will use, are created from the configs folder files. Shared folder is the path where your application have to write all data, see delply for more informations. 
-Current and releases are not present at the beginning, those folders are needed by the deploy stage that will pull sources from you repository.
+domain you will find the compiled files that all services will use, created from the configs folder files. Shared folder is the path where your application have to write all its data, see deeply for more informations. 
+Current and releases folders are not present from the beginning, those folders are needed by the deploy stage that will pull sources from you repository.
 ```shell
 $ cd /home/www/sites/example.com
 $ ls -l
@@ -106,9 +106,9 @@ $ sudo sculptor domain:show example.com
 ```
 
 ## Setup {#setup}
-Every domain is created with a standard bunch of parameters, if you need to customize some you have to use ***setup*** to change it.
-For example if you need to change aliases, domain type or git url you need to use this command. You can use this command in every
-domain state, after it you need to run ***configure*** to apply changes to the configuration files. 
+Every domain is created with a standard bunch of parameters, if you need to customize any of them you have to use ***setup*** to change it.
+(for example if you need to change aliases, domain type or git url). You can use this command in every
+domain state, but don't forget to run ***configure*** to apply changes to the configuration files. 
 
 ```shell
 $ domain:setup example.com alias other-example.com
@@ -139,7 +139,7 @@ Running domain setup example.com alias=other-example.com: ✔
 
 #### Edit Templates {#edit-templates}
 In the ***configs/*** (see directory structure) folder you can apply your modifications to fit your needs, after this operation you can run ***configure*** to create the new configurations. In all files you can use some
-placehoders to auto complete some values. For instance when you crete a **.env** file you need to add database, user and password to create a valid and functional file; sculptor do it for you
+placehoders to auto complete some values. For instance when you crete a **.env** file you need to add database, user and password to create a valid and functional file, sculptor does it for you by
 completing those parameters with the setup of the domain, so you don't need to know passwords or remember user or database that are stored elsewhere and linked to your domain.
 
 #### Placeholders {#placeholders}
@@ -176,7 +176,7 @@ Running domain confiugre example.com: ✔
 ```
 
 ## Certbot {#certbot}
-This command communicate with the certbot tool to obtain Let's Encrypts certificates; to run this command need the domain to be deployed before and be available on the web. The first operation is ***register*** and will run the certbot for the first time. The second command ***deploy*** will apply certificates to your domain. After this operations the certificate will auto-renew and will be managed by the certbot.
+This command communicates with the certbot tool to obtain Let's Encrypts certificates; to run this command you need the domain to be deployed before and to be available on the web. The first operation is ***register*** which will run the certbot for the first time. The second command ***deploy*** will apply certificates to your domain. After these operations the certificate will auto-renew and will be managed by the certbot.
 ```shell
 $ sudo sculptor domain:certbot example.com register
 Running certbot register example.com: ✔
@@ -186,7 +186,7 @@ Running certbot register example.com: ✔
 ```
 
 ## Templates {#templates}
-You can restore ***configs*** and ***deploy*** templates to default values, this can occur also when you upgrade sculptor to a newer version and you whant to apply new configurations; because is a potentially descructive operaion, because will delete all your config customizaionts, you will be ascked to confirm.
+You can restore ***configs*** and ***deploy*** templates to default values, this can occur also when you upgrade sculptor to a newer version and you whant to apply new configurations. Note that since this is a potentially descructive operation, that will delete all of your config customizaions, you will be asked to confirm.
 
 ```shell
 $ sudo sculptor domain:templates example.com
@@ -199,7 +199,7 @@ Now you need to run domain:configure example.com to make modifications
 ```
 
 ## Delete {#delete}
-This operation will remove the domain from web server hosts and delete the root folder of the domain, database and user will remain intact.
+This operation will remove the domain from web server hosts and delete the root folder of the domain, database and user won't be affected.
 ```shell
 $ domain:delete example.com
 Running domain delete example.com: ✔
