@@ -38,7 +38,7 @@ $ sudo sculptor domain:deploy example.com
 Running deploy configure example.com: ✔
 ```
 
-### Finsh
+### Finish
 Once the deploy is finished your domain is ready and the site is running; now you can dig deeper in the commands to configure additional features (e.g. backups or crontabs).
 
 
