@@ -24,8 +24,7 @@ jobs:
       run: npm run production
       
     - name: Readme
-      working-directory: ${{ home }}
-      run: 'echo "Sculptor devops documentation site. Auto generated repository, do not submit pull requests." >> build_production\README.MD'
+      run: 'echo "Sculptor devops documentation site. Auto generated repository, do not submit pull requests." >> ${{GITHUB_WORKSPACE}}\build_production\README.MD'
       
     - name: Pushes to another repository
       uses: cpina/github-action-push-to-another-repository@master
