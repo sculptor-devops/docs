@@ -23,6 +23,9 @@ jobs:
     - name: Production
       run: npm run production
       
+    - name: Readme
+      run: 'echo "Sculptor devops documentation site. Auto generated repository, do not submit pull requests." >> README.MD'
+      
     - name: Pushes to another repository
       uses: cpina/github-action-push-to-another-repository@master
       env:
@@ -30,9 +33,10 @@ jobs:
       with:
         source-directory: 'build_production'
         destination-github-username: 'eppak'
+        user-email: alessandro.cappellozza@gmail.com
         destination-repository-username: 'sculptor-devops'
         destination-repository-name: 'sculptor-devops.github.io'
-        user-email: alessandro.cappellozza@gmail.com
+        
       
   
 
