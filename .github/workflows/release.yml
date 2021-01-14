@@ -29,7 +29,8 @@ jobs:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
       with:
         source-directory: 'build_production'
-        destination-github-username: 'sculptor-devops'
+        destination-github-username: 'eppak'
+        destination-repository-username: 'sculptor-devops'
         destination-repository-name: 'sculptor-devops.github.io'
         user-email: alessandro.cappellozza@gmail.com
       
