@@ -25,7 +25,7 @@ jobs:
       
     - name: Readme
       shell: bash
-      run: 'echo "Sculptor devops documentation site. Auto generated repository, do not submit pull requests." > .\build_production\README.MD'
+      run: 'echo "Sculptor devops documentation site. Auto generated repository, do not submit pull requests." > ${{ env.home }}\build_production\README.md'
       
     - name: Pushes to another repository
       uses: cpina/github-action-push-to-another-repository@master
