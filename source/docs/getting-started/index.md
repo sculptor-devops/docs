@@ -17,7 +17,7 @@ Login into your remote machine via SSH and paste this command, if you are in wit
 
 ``` shell
 $ wget -O setup.sh \
-https://github.com/sculptor-devops/installer/releases/latest/download/setup.sh | \
+https://github.com/sculptor-devops/installer/releases/latest/download/setup.sh ; \
 sudo sh setup.sh
 ```
 
