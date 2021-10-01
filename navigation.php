@@ -13,11 +13,12 @@ return [
             'Troubleshooting' => '/docs/getting-started/troubleshooting/',
         ],
     ],
-    'Repository setup' => [
-        'url' => '/docs/repository',
-    ],
-    'Webhooks' => [
-        'url' => '/docs/webhooks',
+    'Deploy' => [
+        'url' => '/docs/repository',        
+        'children' => [
+            'Repository' => '/docs/repository',
+            'Webhooks' => '/docs/webhooks',
+       ]
     ],
     'Commands' => [
         'url' => '/docs/commands/domains',
