@@ -28,6 +28,7 @@ return [
             'Backups' => '/docs/commands/backups',
             'Alarms' => '/docs/commands/alarms',
             'System' => '/docs/commands/system',
+            'Upgrade' => '/docs/upgrade'    
         ]
     ],
     'Platform' => [
@@ -36,6 +37,7 @@ return [
             'Compatibility' => '/docs/platform/compatibility',
             'Software' => '/docs/platform/software',
             'Security' => '/docs/platform/security',
+            'Roadmap' =>'/docs/roadmap'
         ]
     ],
     'Advanced' => [
@@ -44,16 +46,13 @@ return [
             'Installer' => '/docs/advanced/installer'
         ]
     ],    
-    'Roadmap' => [
-        'url' =>'/docs/roadmap'
-    ],
-    'Upgrade' => [
-        'url' => '/docs/upgrade'    
-    ],
     'Contribute' => [
-        'url' => '/docs/contribute'
+
     ],
     'About' => [
         'url' => '/docs/about'
+        'children' => [
+            'url' => '/docs/contribute'
+        ]        
     ]
 ];
