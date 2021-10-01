@@ -133,6 +133,7 @@ Running domain setup example.com alias=other-example.com: ✔
 |**home**| public| string |it the folder used by the webserver to show on the web, the default is public.|
 |**database**| null| string| is the database that the application will use, must be a valid one.|
 |**user**| null| string | is the user needed by the database parameter to access to the db.|
+|**engine**| 8.0| string | the php version you want to use (warning befose need to be installed with installer, see advance).|
 
 > If you setup **certificate** parameter with **lets-encrypt** remember to activate with certbot command (see below).
 
@@ -153,7 +154,8 @@ completing those parameters with the setup of the domain, so you don't need to k
 |**{CURRENT}**|all| The root of the application e.g /home/www/sites/example.com/current |
 |**{PUBLIC}**|all| The home directory e.g. /home/www/sites/example.com/current/public |
 |**{HOME}**|all| The home as recorded in the db, the default is public |
-|**{PHP_VERSION}**|all| The version of the php interpreter, default is 7.4 |
+|**{PHP_VERSION}**|all| The version of the php interpreter, default is 8.0 |
+|**{PHP}**|all| absolute path of the php interpreter, default is 8.0 |
 |**{REPOSITORY}**|deployer.php| The url of the repository, see vcs setup parameter |
 |**{BRANCH}**|deployer.php| The branch of the repository, see branch setup parameter |
 |**{DATABASE_DRIVER}**|env| Database driver to be used, default is mysql |
