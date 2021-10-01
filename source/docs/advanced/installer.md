@@ -62,7 +62,7 @@ Run time taken 00:00:00
 You can create a custom stage list creating a yml with the desidered stages. For example if you want to install a Nginx/Mysql machine you can delete the agent installation.
 
 > **Warning**
-> All steps need to be run after credential steps that prepare the env, do not remove. The MySql step cannot be run twice if already installed, you need to purge > installation and content.
+> All steps need to be run after credential steps that prepare the env, do not remove. The MySql and Agent step cannot be run twice if already installed, you need to purge > installation and the content. Alternatively the Agent can run twice only if you set the password and db password with the current already in use (see section below).
 
 ```shell
 ./installer config
@@ -114,6 +114,33 @@ Writing template /root/sculptor/custom_templates/system.scupltor.conf
 ```
 Note: if one ore more files are already present will not be overweitter.
 
+
+## Customize versions
+You can modify the node version, installed globally and php versions as follows.
+
+```yml
+stages:
+# PHP Versions
+php_versions:
+  # - 5.6
+  # - 7.0
+  # - 7.1
+  # - 7.2
+  # - 7.3
+  # - 7.4
+  # - 8.0
+  # - 8.1  
+
+# NodeJs Version
+node_version: 14
+```
+
+## Customize other parameters
+Sometime you need to run installer more times but remember that agent and mysql can run only once; in this case you can customize password to keep the same as the first installer run so installation will remain the same.
+```yml
+db_password: database_password
+password: sudo_user_password
+```
 
 ## Summary
 |Command | Parameter | Description
