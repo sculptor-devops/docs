@@ -1,12 +1,10 @@
 <?php
 
 return [
-    'Introduction' => [
-        'url' => '/docs/introduction'
-    ],
     'Getting Started' => [
         'url' => '/docs/getting-started',
         'children' => [
+            'Introduction' => '/docs/introduction',            
             'Installation' => '/docs/getting-started/',
             'Create a domain' => '/docs/getting-started/create-domain/',
             'Move forward' => '/docs/getting-started/moving-forward/',
