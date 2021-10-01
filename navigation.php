@@ -47,13 +47,10 @@ return [
             'Installer' => '/docs/advanced/installer'
         ]
     ],
-    'Contribute' => [
-
-    ],
     'About' => [
         'url' => '/docs/about',
         'children' => [
-            'url' => '/docs/contribute'
+            'Contribute' => '/docs/contribute'
         ]
     ]
 ];
