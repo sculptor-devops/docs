@@ -15,4 +15,7 @@ Different version of Ubuntu LTS have some minor or major packages versions diffe
 | **Nginx** | 1.14.x | 1.17.x |
 | **Redis** | 4.0.x | 5.0.x |
 | **Supervisor** | 3.3.x | 4.1.x |
-| **NodeJS** | 12.x | 12.x |
+| **NodeJS** | 14.x | 14.x |
+
+
+> ***CUSTOMIZATION*** you can change some of this features in section [installer](/docs/advanced/installer/)
