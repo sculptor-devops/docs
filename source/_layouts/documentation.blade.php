@@ -10,8 +10,8 @@
         <nav id="js-nav-menu" class="nav-menu hidden lg:block">
             <ul class="my-0">
                 <li class="pl-4">
-                    <a href="https://github.com/sculptor-devops" target="_blank" class="nav-menu__item">
-                                <i class="fab fa-github fa"></i> GitHub
+                    <a href="#" target="_blank" class="nav-menu__item bg-orange-600 rounded-md text-white p-2">
+                        <i class="fab fa-exclamation fa"></i> This product is in <b>BETA</b> stage
                     </a>
                 </li>        
             </ul>
