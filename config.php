@@ -9,8 +9,8 @@ return [
     'siteDescription' => 'Beautiful & Automated Server Administrator',
 
     // Algolia DocSearch credentials
-    'docsearchApiKey' => '',
-    'docsearchIndexName' => '',
+    'docsearchApiKey' => 'bfe2f70b574268a443312bd71480f20c',
+    'docsearchIndexName' => 'sculptor-devops',
 
     // navigation menu
     'navigation' => require_once('navigation.php'),
