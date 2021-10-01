@@ -18,17 +18,17 @@ return [
     ],
     'Webhooks' => [
         'url' => '/docs/webhooks',
-    ],    
+    ],
     'Commands' => [
         'url' => '/docs/commands/domains',
         'children' => [
             'Domains' => '/docs/commands/domains',
             'Deploy' => '/docs/commands/deploy',
-            'Databases' => '/docs/commands/databases',            
+            'Databases' => '/docs/commands/databases',
             'Backups' => '/docs/commands/backups',
             'Alarms' => '/docs/commands/alarms',
             'System' => '/docs/commands/system',
-            'Upgrade' => '/docs/upgrade'    
+            'Upgrade' => '/docs/upgrade'
         ]
     ],
     'Platform' => [
@@ -37,22 +37,22 @@ return [
             'Compatibility' => '/docs/platform/compatibility',
             'Software' => '/docs/platform/software',
             'Security' => '/docs/platform/security',
-            'Roadmap' =>'/docs/roadmap'
+            'Roadmap' => '/docs/roadmap'
         ]
     ],
     'Advanced' => [
-        'url' =>'/docs/advanced/installer',
+        'url' => '/docs/advanced/installer',
         'children' => [
             'Installer' => '/docs/advanced/installer'
         ]
-    ],    
+    ],
     'Contribute' => [
 
     ],
     'About' => [
-        'url' => '/docs/about'
+        'url' => '/docs/about',
         'children' => [
             'url' => '/docs/contribute'
-        ]        
+        ]
     ]
 ];
